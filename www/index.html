@@ -210,17 +210,11 @@
 				$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 			}else{
 
-				var myPhotoBrowserPopupDark = myApp.photoBrowser({
-					photos : [
-						{
-							url: '/image/'+$(this).attr("data-menuTitleIndex")+'.png',
-							caption: $(this).html()
-						}
-					],
-					theme: 'dark',
-					type: 'standalone'
-				});
-				myPhotoBrowserPopupDark.open();
+				var myPhotoBrowser = myApp.photoBrowser({
+					zoom: 400,
+					photos: ['image/'+$(this).attr("data-menuTitleIndex")+'.png'],
+					caption: $(this).html()
+				});   
 			}
 			//alert($(this).attr("data-menuTitleIndex"));
 			
