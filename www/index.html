@@ -190,15 +190,13 @@
 			height = (height *2)-100;
 		}
 
-		//$(".pinch-zoom").html("<img src=\"image/1.png\">");
-		;
+
 		var defaultContent=$(".pinch-zoom").html();
 		
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		function onOnline() {
-		//	$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
-		//$(".pinch-zoom").html("<img src=\"image/1.png\">");
+			$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 		}
 		
 		function onOffline() {
