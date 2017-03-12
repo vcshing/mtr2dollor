@@ -192,15 +192,11 @@
 		}
 		
 		var defaultContent=$(".pinch-zoom").html();
-		//$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
-		
-		
-		
 		
 		document.addEventListener("online", onOnline, false);
 		document.addEventListener("offline", onOffline, false);
 		function onOnline() {
-			$(".pinch-zoom").html("<iframe src=\"https://www.google.com/maps/d/embed?mid=1h7b-wWqYsjIKFRD6RVe8iXM2yWk\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
+			$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 		}
 		
 		function onOffline() {
@@ -217,7 +213,7 @@
 				var myPhotoBrowserPopupDark = myApp.photoBrowser({
 					photos : [
 						{
-							url: 'image/'+$(this).attr("data-menuTitleIndex")+'.png',
+							url: '/image/'+$(this).attr("data-menuTitleIndex")+'.png',
 							caption: $(this).html()
 						}
 					],
