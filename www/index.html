@@ -219,7 +219,7 @@
 
 				var myPhotoBrowser = myApp.photoBrowser({
 					zoom: 400,
-					photos: ['/android_asset/www/image/'+$(this).attr("data-menuTitleIndex")+'.png'],
+					photos: ['file:///android_asset/www/image/'+$(this).attr("data-menuTitleIndex")+'.png'],
 					caption: $(this).html()
 				});   
 				myPhotoBrowser.open();
