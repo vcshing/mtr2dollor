@@ -118,7 +118,40 @@
                     <div class="page-content">
                 
 							<div class="pinch-zoom">
-								
+<div class="content-block"><p class="menu" data-menuTitleIndex=1>海港城港威商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=2>中環至半山自動扶手電梯系統</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=3>置富第一城</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=4>半島中心</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=5>和富薈</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=6>沙田商業中心</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=7>穗禾商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=8>富寧花園商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=9>頌安商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=10>家維邨商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=11>企業廣場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=12>葵盛東商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=13>葵星中心</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=14>平田商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=15>耀安商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=16>盈暉薈</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=17>大角咀市政大廈</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=18>港灣豪庭廣場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=19>白田商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=20>偉利廣場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=21>美林商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=22>葵涌邨商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=23>悅來坊</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=24>大窩口第二商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=25>尚德商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=26>長發廣場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=27>青衣市政大廈</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=28>愉景新城</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=29>大鴻輝(荃灣)中心</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=30>灣景中心</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=31>啟德花園購物商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=32>駿發花園商場</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=33>亞洲國際博覽館</p></div>
+<div class="content-block"><p class="menu" data-menuTitleIndex=34>深圳地鐵褔田口岸站</p></div>
 							</div>
 			
                     </div>
@@ -158,21 +191,21 @@
 			height = (height *2)-100;
 		}
 		
-		
-		$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
-		
-		
+		var defaultContent=$(".pinch-zoom").html();
+		//$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 		
 		
-		//document.addEventListener("online", onOnline, false);
-		//document.addEventListener("offline", onOffline, false);
-		//function onOnline() {
-		//	$(".pinch-zoom").html("<iframe src=\"https://www.google.com/maps/d/embed?mid=1h7b-wWqYsjIKFRD6RVe8iXM2yWk\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
-		//}
 		
-		//function onOffline() {
-			//$(".pinch-zoom").html("<iframe src=\"image/map.png\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
-		//} 
+		
+		document.addEventListener("online", onOnline, false);
+		document.addEventListener("offline", onOffline, false);
+		function onOnline() {
+			$(".pinch-zoom").html("<iframe src=\"https://www.google.com/maps/d/embed?mid=1h7b-wWqYsjIKFRD6RVe8iXM2yWk\" width=\"100%\" height=\""+($(window).height()-100)+"px\"></iframe>");
+		}
+		
+		function onOffline() {
+			$(".pinch-zoom").html(defaultContent);
+		} 
 		  
 		
 		$(".menu").bind("click",function(e){
@@ -180,11 +213,18 @@
 			if($(this).attr("data-menuTitleIndex")==0){
 				$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 			}else{
-				var myPhotoBrowser = myApp.photoBrowser({
-					zoom: 400,
-					photos: ['image/'+$(this).attr("data-menuTitleIndex")+'.png']
-				});   
-				myPhotoBrowser.open();
+
+				var myPhotoBrowserPopupDark = myApp.photoBrowser({
+					photos : [
+						{
+							url: 'image/'+$(this).attr("data-menuTitleIndex")+'.png',
+							caption: $(this).html()
+						}
+					],
+					theme: 'dark',
+					type: 'standalone'
+				});
+				myPhotoBrowserPopupDark.open();
 			}
 			//alert($(this).attr("data-menuTitleIndex"));
 			
