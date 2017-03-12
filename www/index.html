@@ -180,9 +180,9 @@
 			if($(this).attr("data-menuTitleIndex")==0){
 				$(".pinch-zoom").html("<iframe id=\"iframe\" src=\"https://www.google.com/maps/d/embed?mid=10yjoga1lBk3k8TpgFFnBOUmLX1Y\" width=\"100%\" height=\""+(height-20)+"px\"></iframe>");
 			}else{
-				var myPhotoBrowser = app.photoBrowser({
+				var myPhotoBrowser = myApp.photoBrowser({
 					zoom: 400,
-					photos: ['image/station/image'+$(this).attr("data-menuTitleIndex")+'.png']
+					photos: ['image/'+$(this).attr("data-menuTitleIndex")+'.png']
 				});   
 				myPhotoBrowser.open();
 			}
