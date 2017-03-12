@@ -190,7 +190,14 @@
 		if (height < 400) {
 			height = (height *2)-100;
 		}
+		alert(location.hostname);
+		alert(location.host);
+		alert(location.href);
+		alert(location.origin);
+		alert(location.pathname);
+		;
 		
+		;
 		var defaultContent=$(".pinch-zoom").html();
 		
 		document.addEventListener("online", onOnline, false);
@@ -212,7 +219,7 @@
 
 				var myPhotoBrowser = myApp.photoBrowser({
 					zoom: 400,
-					photos: ['image/'+$(this).attr("data-menuTitleIndex")+'.png'],
+					photos: ['/image/'+$(this).attr("data-menuTitleIndex")+'.png'],
 					caption: $(this).html()
 				});   
 				myPhotoBrowser.open();
