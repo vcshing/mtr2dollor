@@ -54,6 +54,9 @@
         <div class="content-block otherApp">
             <p>Other App</p>
         </div>
+					<div class="content-block shareApp">
+				<p>Share App</p>
+			</div>
 <div class="content-block"><p class="menu" data-menuTitleIndex=0>Google 地圖</p></div>
 <div class="content-block"><p class="menu" data-menuTitleIndex=1>海港城港威商場</p></div>
 <div class="content-block"><p class="menu" data-menuTitleIndex=2>中環至半山自動扶手電梯系統</p></div>
@@ -229,6 +232,10 @@
 			var url = "https://play.google.com/store/apps/developer?id=Sky+Explorer";
 			window.open(url, target, options);
 			
+		})
+
+		$(".shareApp").bind("click",function(e){
+			window.plugins.socialsharing.share("MTR 2 Dollor", "Good Apps", "", "https://play.google.com/store/apps/details?id=com.skyexplorer.mtr2dollor");
 		})
 	})
 	

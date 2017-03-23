@@ -75,6 +75,9 @@
         },
         "cordova-plugin-x-socialsharing": {
             "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
         }
     },
     "dependent_plugins": {
