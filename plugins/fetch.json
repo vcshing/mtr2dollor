@@ -10,7 +10,7 @@
     "cordova-plugin-camera": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-camera@~2.1.1"
+            "id": "cordova-plugin-camera"
         },
         "is_top_level": true,
         "variables": {}
@@ -181,6 +181,22 @@
             "id": "com-sarriaroman-photoviewer"
         },
         "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-admob": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-admob"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-connectivity-monitor": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-connectivity-monitor"
+        },
+        "is_top_level": false,
         "variables": {}
     }
 }

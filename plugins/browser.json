@@ -69,6 +69,9 @@
         },
         "com-sarriaroman-photoviewer": {
             "PACKAGE_NAME": "com.skyexplorer.hiking"
+        },
+        "cordova-admob": {
+            "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
         }
     },
     "dependent_plugins": {
@@ -77,6 +80,9 @@
         },
         "cordova-plugin-file": {
             "PACKAGE_NAME": "com.skyexplorer.hiking"
+        },
+        "cordova-connectivity-monitor": {
+            "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
         }
     }
 }
