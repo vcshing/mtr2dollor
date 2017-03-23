@@ -72,6 +72,9 @@
         },
         "cordova-admob": {
             "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.skyexplorer.mtr2dollor"
         }
     },
     "dependent_plugins": {
